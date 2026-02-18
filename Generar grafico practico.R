@@ -24,3 +24,4 @@ resumen_mtcars <- mtcars %>%
     max_hp = max(hp)
   )
 
+suma_de_valores= 2+2 #prueba 
