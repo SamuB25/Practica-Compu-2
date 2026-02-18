@@ -13,3 +13,14 @@ plot(x = mtcars$wt,
 png("grafico_consumo.png")
 plot(x = mtcars$wt, y = mtcars$mpg, main = "Peso vs. Consumo", col = "red", pch = 19)
 dev.off()
+
+resumen_mtcars <- mtcars %>%
+  group_by(cyl) %>%
+  summarise(
+    conteo = n(),
+    promedio_hp = mean(hp),
+    sd_hp = sd(hp),
+    min_hp = min(hp),
+    max_hp = max(hp)
+  )
+
